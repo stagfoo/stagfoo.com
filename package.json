@@ -1,0 +1,29 @@
+{
+  "name": "chum-bucket",
+  "version": "1.0.0",
+  "description": "an example glitch app with typescript and webpack",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "webpack-dev-server --content-base dist --hot --inline --mode=development",
+    "build": "webpack -p",
+    "now build": "webpack -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "joro": "^1.0.4",
+    "morphdom": "^2.5.12",
+    "nanohtml": "^1.9.0",
+    "obake.js": "^1.0.1",
+    "page": "^1.11.4"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.7.2",
+    "workbox-webpack-plugin": "^5.0.0"
+  }
+}

@@ -2,7 +2,7 @@ import { defaultState, reducers } from './store';
 import { startRouters } from './url';
 import { createStore } from 'obake.js';
 import { AppRoot } from './ui';
-import { BaseStyles  } from './styles';
+import { BaseStyles, mountPinky  } from './styles';
 import morphdom from 'morphdom';
 
 //Default render
@@ -29,6 +29,7 @@ function renderer(newState) {
 //too fast for fonts
 startRouters();
 BaseStyles();
+mountPinky();
 
  if ('serviceWorker' in navigator) {
      window.addEventListener('load', () => {

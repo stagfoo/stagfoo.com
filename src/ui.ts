@@ -1,12 +1,12 @@
 import { handleGreetingClick } from './actions';
 import html from 'nanohtml';
-import {routes } from './store';
-import { notificationStyle } from 'styles';
+import { routes } from './store';
+import { notificationStyle, homepageStyles, navpageStyles } from 'styles';
 
 export function AppRoot(state) {
   return html`
   <div id="app">
-      ${navbar(state)}
+      ${header(state)}
       <div class="page">
         ${routing(state)}
       </div>
@@ -18,10 +18,25 @@ export function AppRoot(state) {
 export function routing(state) {
   switch (state.currentPage.name) {
     case "HOME":
+      homepageStyles()
       return html`
-        <h1>Chumbucket</h1>
-        <textarea>(ノ-◇-)ノ ${state.greeting}</textarea>
-        <button onclick=${handleGreetingClick}>Chum the water</button>
+      <div class="greeting">
+        <h1>GDAY,</h1>
+        <h2> I am Alex, Hows it going?</h2>
+      </div>
+    `
+    case "NAV":
+      navpageStyles()
+      return html`
+      <div id="navpage">
+        <ul>
+          ${Object.keys(routes).map(key => {
+            if (key !== 'Home') {
+              return html`<li><a href="${routes[key]}">${key}</a></li>`
+            }
+        })}
+        </ul>
+      </div>
     `
     case "EXAMPLE_FETCH":
       return html`
@@ -30,30 +45,43 @@ export function routing(state) {
         <button onclick=${handleGreetingClick}>Feed the Sharks</button>
     `
     default:
-    return html`
+      return html`
        <h1>404 CHUM</h1>
   `
   }
 }
-export function navbar(state) {
+export function header(state) {
+  const isActive = state.currentPage.name === "NAV";
   return html`
   <div class="nav">
-  <ul class="row start-xs">${Object.keys(routes).map(name => {
-          const isActive = state.currentPage.activePage === routes[name];
-          const activeText = isActive ? "#"+name : name
-          return html`
-          <li class="${isActive? "active": ""}">
-            <a class="box" href="${routes[name]}">${activeText}</a>
-          </li>`
-        })}</ul>
-        </div>
+  <ul>
+      <li>
+        <a class="box" href="/">
+        ${logo()}
+      </a>
+      </li>
+      <li class="float-r ${isActive ? "down" : "up"}">
+        <a class="box" href=" ${isActive ? "/" : "/nav"}"">▲</a>
+      </li>
+    </ul>
+  </div>
       `;
 }
 
-function notification(state){
+export function logo(){
+  const colorScheme = document.body.className;
+  switch (colorScheme) {
+    case "black-yellow":
+        return html`<img height="36" class="logo-${colorScheme}" src="/logo-invert.png"/>`
+      default:
+        return html`<img height="36" class="logo-${colorScheme}" src="/logo-normal.png"/>`
+  }
+}
+
+function notification(state) {
   notificationStyle()
   return html`
-    <div class="notification ${state.notification.show? "show": "hide"}">
+    <div class="notification ${state.notification.show ? "show" : "hide"}">
       ${state.notification.text}
     </div>
   `

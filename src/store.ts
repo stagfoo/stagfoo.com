@@ -2,25 +2,33 @@ import { reducer } from 'obake.js';
 
 export const defaultState = {
   greeting: '🍖🍖🍖🍖',
-  currentPage: { name: 'HOME', activePage: "/" },
+  currentPage: { name: 'HOME' },
   notification: {
-    text: "sharks loaded",
-    show: true
+    text: "",
+    show: false
   }
  }
 
- export const routes = {
-    'Home': '/',
-    'Example Fetch': '/example-fetch',
- }
- //TODO clean up
- export const activePage = {
-   "HOME": "/",
-   "EXAMPLE_FETCH": "/example-fetch"
- }
+
+//  export const routes = {
+//     'Home': '/',
+//     'raeon': '/raeon',
+//     'obake.js': '/obake',
+//     'fairybread': '/fairybread',
+//     'joro': '/joro',
+//     'chumbucket': '/chumbucket',
+//  }
+export const routes = {
+  'Home': '/',
+  'raeon': 'https://www.behance.net/gallery/85987423/Raeon-Design-Language?tracking_source=search_projects_recommended%7Cstagfoo',
+  'obake.js': 'https://github.com/stagfoo/obake',
+  'fairybread': 'https://github.com/stagfoo/fairybread',
+  'joro': 'https://github.com/stagfoo/joro',
+  'chumbucket': 'https://github.com/stagfoo/chumbucket',
+}
 export const reducers = {
   updateCurrentPage: reducer((state, value: string) => {
-    state.currentPage = { name: value, activePage:activePage[value]  };
+    state.currentPage = { name: value  };
   }),
   changeGreeting: reducer((state, value: string) => {
     state.greeting = value;

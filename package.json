@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "emo": "^1.1.2",
     "joro": "^1.0.4",
     "morphdom": "^2.5.12",
+    "nanocomponent": "^6.5.3",
     "nanohtml": "^1.9.0",
     "obake.js": "^1.0.1",
     "page": "^1.11.4"

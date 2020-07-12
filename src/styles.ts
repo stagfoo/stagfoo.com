@@ -18,6 +18,8 @@ export const DS = {
     md: 16,
     lg: 24,
     xl: 32,
+    xxl: 48,
+
   },
   colors: {
     purple: "#8D58FD",
@@ -35,11 +37,13 @@ export const STYLES = new joro();
 
 function buttonStyle(){
   return `
-  background: ${DS.colors.blue};
-  color:  ${DS.colors.purple};
+  background: inherit;
+  color:  ${DS.colors.black};
   box-sizing: border-box;
   font-size: ${DS.fontSizes.lg}px;
-  padding: ${DS.gutters.md}px;
+  font-family:${DS.fontFamily.alt};
+  padding: ${DS.gutters.sm}px ${DS.gutters.xxl}px;
+  border-radius: 30px;
   border: 0;
   text-decoration: none;
   `
@@ -135,10 +139,29 @@ export function colorSchemes(){
       background: ${DS.colors.yellow};
       color: ${DS.colors.black};
     }
+    html body.yellow-black button {
+      color: ${DS.colors.yellow};
+      background: ${DS.colors.black};
+    }
+
     html body.black-yellow {
       background: ${DS.colors.black};
       color: ${DS.colors.yellow};
     }
+    html body.yellow-black button {
+      background: ${DS.colors.yellow};
+      color: ${DS.colors.black};
+    }
+
+    html body.black-green {
+      background: ${DS.colors.black};
+      color: ${DS.colors.green};
+    }
+    html body.black-green button {
+      background: ${DS.colors.green};
+      color: ${DS.colors.black};
+    }
+
   `
 }
 
@@ -185,4 +208,62 @@ export function navpageStyles(){
       text-decoration: none;
     }
   `)
+}
+
+export function JoroStyles(){
+  STYLES.add('joro_demo', `
+    #joro #code {
+      font-family:${DS.fontFamily.default};
+      font-size: ${DS.fontSizes.md - 4}px;
+      margin-top: ${DS.gutters.lg}px;
+      border-radius: ${DS.gutters.md}px;
+      border: ${DS.colors.green} 1px solid;
+      color: ${DS.colors.green};
+      display:block;
+      padding: ${DS.gutters.md}px;
+      overflow:hidden;
+    }
+    #joro button {
+      margin-bottom: 10vh
+    }
+    .spider {
+      font-weight: bold;
+      display:inline-block;
+      margin: 0px;
+      padding: 0px;
+      transition: 0.3s ease all;
+    }
+    .spider.main {
+      font-size: ${DS.fontSizes.xxl}px;
+      margin: 10vh auto 10vh auto;
+      display:block;
+      width: 50vw;
+    }
+    .spider.little {
+      top: 10vh;
+      position: absolute;
+      color: ${DS.colors.black};
+
+    }
+    .spider.little.slot1 {
+      left: 0vw;
+    }
+    .spider.little.slot2 {
+      left: 30vw;
+    }
+    .spider.little.slot3 {
+      left: 60vw;
+    }
+  `)
+}
+
+export function showHiddenSpiders() {
+  STYLES.add('joro_demo_show', `
+  .spider.little {
+    color: ${DS.colors.green};
+  }`)
+}
+
+export function hideSpiders(){
+  STYLES.remove('joro_demo_show', true)
 }

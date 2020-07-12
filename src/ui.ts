@@ -2,6 +2,7 @@ import { handleGreetingClick } from './actions';
 import html from 'nanohtml';
 import { routes } from './store';
 import { notificationStyle, homepageStyles, navpageStyles } from 'styles';
+import { JoroView } from 'demos/joro';
 
 export function AppRoot(state) {
   return html`
@@ -31,22 +32,30 @@ export function routing(state) {
       <div id="navpage">
         <ul>
           ${Object.keys(routes).map(key => {
-            if (key !== 'Home') {
-              return html`<li><a href="${routes[key]}">${key}</a></li>`
-            }
-        })}
+        if (key !== 'Home') {
+          return html`<li><a href="${routes[key]}">${key}</a></li>`
+        }
+      })}
         </ul>
       </div>
     `
-    case "EXAMPLE_FETCH":
+    case "CHUMBUCKET":
       return html`
-      <h1>Fetching no?</h1>
-        <textarea>（*＾3＾）/～      ${state.greeting}</textarea>
-        <button onclick=${handleGreetingClick}>Feed the Sharks</button>
-    `
+          <div id="${state.currentPage.name}">
+            ${state.currentPage.name}
+          </div>
+        `
+    case "JORO":
+      return JoroView(state)
+    case "OBAKE":
+      return html`
+          <div id="${state.currentPage.name}">
+            ${state.currentPage.name}
+          </div>
+        `
     default:
       return html`
-       <h1>404 CHUM</h1>
+       <h1>404 </h1>
   `
   }
 }
@@ -68,13 +77,15 @@ export function header(state) {
       `;
 }
 
-export function logo(){
+export function logo() {
   const colorScheme = document.body.className;
   switch (colorScheme) {
     case "black-yellow":
-        return html`<img height="36" class="logo-${colorScheme}" src="/logo-invert.png"/>`
-      default:
-        return html`<img height="36" class="logo-${colorScheme}" src="/logo-normal.png"/>`
+      return html`<img height="36" class="logo-${colorScheme}" src="/logo-invert.png"/>`
+    case "black-green":
+      return html`<img height="36" class="logo-${colorScheme}" src="/logo-green.png"/>`
+    default:
+      return html`<img height="36" class="logo-${colorScheme}" src="/logo-normal.png"/>`
   }
 }
 

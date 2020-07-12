@@ -22,6 +22,19 @@ const NAV = (ctx: Context, next: any) => {
   body.className = "black-yellow"
   state._update('updateCurrentPage', 'NAV')
 };
+const OBAKE = (ctx: Context, next: any) => {
+  body.className = "black-yellow"
+  state._update('updateCurrentPage', 'OBAKE')
+};
+const JORO = (ctx: Context, next: any) => {
+  body.className = "black-green"
+  state._update('updateCurrentPage', 'JORO')
+};
+const CHUMBUCKET = (ctx: Context, next: any) => {
+  body.className = "black-yellow"
+  state._update('updateCurrentPage', 'CHUMBUCKET')
+};
+
 
 const EXAMPLE_FETCH = (ctx: Context, next: any) => {
   getData().then(data => {
@@ -33,6 +46,9 @@ const EXAMPLE_FETCH = (ctx: Context, next: any) => {
 // Routes
 page('/', HOME_PAGE);
 page('/nav', NAV);
+page('/obake', OBAKE);
+page('/chumbucket', CHUMBUCKET);
+page('/joro', JORO);
 page('/example-fetch', EXAMPLE_FETCH);
 
 

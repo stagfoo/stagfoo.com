@@ -12,12 +12,11 @@ export const defaultState = {
 
  export const routes = {
     'Home': '/',
-    // 'raeon': '/raeon',
-    'obake.js': '/obake',
-    'fairybread': '/fairybread',
     'joro': '/joro',
-    'chumbucket': '/chumbucket',
-    'pinky': '/pinky',
+    'raeon': 'https://www.behance.net/gallery/85987423/Raeon-Design-Language?tracking_source=search_projects_recommended%7Cstagfoo',
+    'obake.js': 'https://github.com/stagfoo/obake',
+    'fairybread': 'https://github.com/stagfoo/fairybread',
+    'chumbucket': 'https://github.com/stagfoo/chumbucket',
  }
 // export const routes = {
 //   'Home': '/',

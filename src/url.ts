@@ -23,7 +23,7 @@ const NAV = (ctx: Context, next: any) => {
   state._update('updateCurrentPage', 'NAV')
 };
 const OBAKE = (ctx: Context, next: any) => {
-  body.className = "black-yellow"
+  body.className = "black-blue"
   state._update('updateCurrentPage', 'OBAKE')
 };
 const JORO = (ctx: Context, next: any) => {

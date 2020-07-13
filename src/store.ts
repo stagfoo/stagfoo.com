@@ -3,6 +3,7 @@ import { reducer } from 'obake.js';
 export const defaultState = {
   greeting: '🍖🍖🍖🍖',
   currentPage: { name: 'HOME' },
+  emoji: "(ﾉ⊙﹏⊙)ﾉ",
   notification: {
     text: "",
     show: false
@@ -14,7 +15,7 @@ export const defaultState = {
     'Home': '/',
     'joro': '/joro',
     'raeon': 'https://www.behance.net/gallery/85987423/Raeon-Design-Language?tracking_source=search_projects_recommended%7Cstagfoo',
-    'obake.js': 'https://github.com/stagfoo/obake',
+    'obake.js': '/obake',
     'fairybread': 'https://github.com/stagfoo/fairybread',
     'chumbucket': 'https://github.com/stagfoo/chumbucket',
  }
@@ -35,5 +36,8 @@ export const reducers = {
   }),
   updateNotification: reducer((state, value:{text: string, show: boolean}) => {
     state.notification = value;
+  }),
+  updateEmoji: reducer((state, value:string) => {
+    state.emoji = value;
   }),
 }

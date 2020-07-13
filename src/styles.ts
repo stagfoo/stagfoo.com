@@ -162,6 +162,15 @@ export function colorSchemes(){
       color: ${DS.colors.black};
     }
 
+    html body.black-blue {
+      background: ${DS.colors.black};
+      color: ${DS.colors.blue};
+    }
+    html body.black-blue button {
+      background: ${DS.colors.blue};
+      color: ${DS.colors.black};
+    }
+
   `
 }
 
@@ -266,4 +275,34 @@ export function showHiddenSpiders() {
 
 export function hideSpiders(){
   STYLES.remove('joro_demo_show', true)
+}
+
+
+export function ObakeStyles(){
+  STYLES.add('obake_demo', `
+    #obake #code {
+      font-family:${DS.fontFamily.default};
+      font-size: ${DS.fontSizes.md - 4}px;
+      margin-top: ${DS.gutters.lg}px;
+      border-radius: ${DS.gutters.md}px;
+      border: ${DS.colors.blue} 1px solid;
+      color: ${DS.colors.blue};
+      display:block;
+      padding: ${DS.gutters.md}px;
+      overflow-x:scroll;
+    }
+    #obake button {
+      margin-bottom: 10vh
+    }
+    .emoji {
+      font-weight: bold;
+      margin: 0px;
+      text-align:center;
+      padding: 0px;
+      transition: 0.3s ease all;
+      font-size: ${DS.fontSizes.xxl}px;
+      margin: 10vh auto 10vh auto;
+      display:block;
+    }
+  `)
 }

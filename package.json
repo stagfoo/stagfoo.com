@@ -4,7 +4,7 @@
   "description": "an example glitch app with typescript and webpack",
   "main": "src/index.ts",
   "scripts": {
-    "start": "webpack-dev-server --content-base dist --hot --inline --mode=development",
+    "start": "webpack-dev-server --mode=development",
     "build": "webpack -p",
     "pwa": "cd chumbucket; create-pwa --icon=\"icon.png\" --launch=\"splash.png\"",
     "now build": "webpack -p"

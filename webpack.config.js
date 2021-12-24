@@ -20,7 +20,7 @@ module.exports = {
       maxAsyncRequests: 5,
       maxInitialRequests: 3,
       automaticNameDelimiter: '~',
-      name: true,
+      name: '[name].chumbucket',
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -48,8 +48,11 @@ module.exports = {
   plugins: [
   ],
   devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     hot:true,
     historyApiFallback: true,
-    disableHostCheck: true
+    allowedHosts: '*'
   },
 };

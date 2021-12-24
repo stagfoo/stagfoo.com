@@ -1,9 +1,9 @@
-import { defaultState, reducers } from './store';
+import { reducers, defaultState } from './store';
 import { startRouters } from './url';
 import { createStore } from 'obake.js';
 import { AppRoot } from './ui';
-import { BaseStyles, mountPinky  } from './styles';
-import morphdom from 'morphdom';
+import { BaseStyles  } from './styles';
+import morph from 'nanomorph';
 
 //Default render
 const ROOT_NODE = document.body.querySelector('#app');
@@ -11,32 +11,30 @@ const ROOT_NODE = document.body.querySelector('#app');
 //Create Store
 export const state = createStore(
     defaultState,
-    { renderer: renderer },
+    { renderer },
     reducers
   );
+
 //Render Loop function
+// spec - https://dom.spec.whatwg.org/#concept-node-equals
 function renderer(newState) {
-   morphdom(ROOT_NODE, AppRoot(newState), {
-    onBeforeElUpdated: function(fromEl, toEl) {
-        if (fromEl.isEqualNode(toEl)) {
-            return false
-        }
-        return true
-    }
+  morph(ROOT_NODE, AppRoot(newState), {
+    onBeforeElUpdated: (f, i) => !f.isEqualNode(i)
   })
 }
 //Start Router listener
-//too fast for fonts
 startRouters();
 BaseStyles();
-mountPinky();
 
- if ('serviceWorker' in navigator) {
-     window.addEventListener('load', () => {
-       navigator.serviceWorker.register('/service-worker.js').then(registration => {
-         console.log('SW registered: ', registration);
-       }).catch(registrationError => {
-         console.log('SW registration failed: ', registrationError);
-       });
-     });
-   }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js').then(
+          registration => {
+              console.log(`ServiceWorker registration successful with scope: ${registration.scope}`);
+          },
+          error => {
+              console.log(`ServiceWorker registration failed: ${error}`);
+          }
+      );
+  });
+}

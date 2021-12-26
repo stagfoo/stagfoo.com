@@ -1,5 +1,5 @@
 import { reducers, defaultState } from './store';
-import { startRouters } from './url';
+import { startRouters, getData } from './url';
 import { createStore } from 'obake.js';
 import { AppRoot } from './ui';
 import { BaseStyles  } from './styles';
@@ -23,6 +23,9 @@ function renderer(newState) {
   })
 }
 //Start Router listener
+getData(window.location.origin + "/data.json").then(data => {
+  state._update('updatePages', data.pages)
+})
 startRouters();
 BaseStyles();
 

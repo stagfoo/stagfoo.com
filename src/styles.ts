@@ -146,7 +146,7 @@ export function pageMutations(){
 export function BaseStyles() {
   STYLES.add("baseStyles", `
     * {
-      font-family: ${DS.fontFamily.default};
+      font-family: ${DS.fontFamily.alt};
     }
     html,body {
       margin: 0;
@@ -162,6 +162,7 @@ export function BaseStyles() {
       word-break: break-all;
       top: 0px;
       left: 0px;
+      font-family: ${DS.fontFamily.default};
       font-size: ${DS.fontSizes.bg}px;
       font-weight: bold;
       z-index: 0;

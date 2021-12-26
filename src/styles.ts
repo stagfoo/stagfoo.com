@@ -2,13 +2,14 @@ import joro from 'joro';
 
 export const DS = {
   fontFamily: {
-    default: "Fira Mono, san-serif",
-    alt: "'Staatliches', san-serif",
+    default: "Noto Sans JP, san-serif",
+    alt: "IBM Plex Mono, san-serif",
   },
   fontSizes: {
     sm: 8,
     md: 16,
-    lg: 24,
+    lg: 28,
+    bg: 23,
     xl: 32,
 
   },
@@ -20,26 +21,19 @@ export const DS = {
   },
   colors: {
     purple: "#8D58FD",
-    blue: "#58D5FD",
-    green: "#83FD58",
-    yellow: "#FDD758"
+    blue: "#301FFD",
+    blue_l: "#58D5FD",
+    green: "#34FF00",
+    yellow: "#F6E73B",
+    pink: "#FD58B1",
+    white: "#FFFFFF",
+    black: "#000000"
   }
 }
 
 export const STYLES = new joro();
 
 
-function buttonStyle(){
-  return `
-  background: ${DS.colors.yellow};
-  color:  ${DS.colors.purple};
-  box-sizing: border-box;
-  font-size: ${DS.fontSizes.lg}px;
-  padding: ${DS.gutters.md}px;
-  border: 0;
-  text-decoration: none;
-  `
-}
 export function notificationStyle(){
   STYLES.add("notificationStyle", `
   .notification {
@@ -65,22 +59,144 @@ export function notificationStyle(){
   `)
 }
 
+export function backgroundMutations(){
+  return `
+    .home.background {
+      background: ${DS.colors.blue};
+      color:  ${DS.colors.blue_l};
+    }
+    .joro.background { 
+      color: ${DS.colors.purple};
+      background: ${DS.colors.green};
+    }
+    .obake.background { 
+      color: ${DS.colors.blue_l};
+      background: ${DS.colors.purple};
+    }
+    .amico.background { 
+      background: ${DS.colors.pink};
+    }
+    .chumbucket.background { 
+      color: #000;
+      background: ${DS.colors.white};
+    }
+    .libraries.background { 
+      color: ${DS.colors.blue};
+      background: ${DS.colors.yellow};
+    }
+    .deathmark.background { 
+      background-color: ${DS.colors.yellow};
+      background-image: url('logo-deathmark.png');
+      background-size: 30px;
+    }
+  
+  `
+}
+export function pageMutations(){
+  return `
+  .page.chumbucket {
+    width: 100vw;
+    height: 100vh;
+    border: 0px;
+    box-shadow: none;
+    background: transparent;
+  }
+  .page.chumbucket li {
+    border: none;
+  }
+  .page.chumbucket .center {
+    margin: 20vh auto;
+    width: 50%;
+  }
+  .chumbucket .emoji {
+    position: absolute;
+    right: 50%;
+    top: 70%;
+    font-size: 100px;
+  }
+  .chumbucket .emoji +   .emoji  {
+    right: 80%;
+    top: 20%;
+  }
+  .page.chumbucket img {
+    position: absolute;
+    right: ${DS.gutters.xl}px;
+  }
+  /*------------------*/
+  .page.deathmark {
+    background-repeat: no-repeat;
+    background-position: 100% 10%;
+    background-image: url('logo-deathmark.png');
+  }
+  .page.deathmark p {
+    width: 80%;
+  }
+  /*------------------*/
+  .page.obake {
+    padding-top: 100px;
+  }
+  /*------------------*/
+  .gifs.deathmark img,
+  .gifs.joro img {
+    width: 300px;
+  }
+  `
+}
+
 export function BaseStyles() {
   STYLES.add("baseStyles", `
+    * {
+      font-family: ${DS.fontFamily.default};
+    }
     html,body {
       margin: 0;
       padding: 0;
-      background: ${DS.colors.purple};
-      color:  ${DS.colors.blue};
+      color:  ${DS.colors.black};
       opacity: 1;
+      height: 100vh;
+      overflow:hidden;
     }
+
+    .background {
+      position: absolute;
+      word-break: break-all;
+      top: 0px;
+      left: 0px;
+      font-size: ${DS.fontSizes.bg}px;
+      font-weight: bold;
+      z-index: 0;
+      color:  ${DS.colors.blue_l};
+      height: 100vh;
+      width: 100vw;
+    }
+    ${backgroundMutations()}
+    ${pageMutations()}
+
+    .page {
+      border: 8px solid ${DS.colors.black};
+      background: ${DS.colors.white};
+      z-index: 5;
+      position: absolute;
+      width: 360px;
+      box-sizing: border-box;
+      padding: ${DS.gutters.lg}px;
+      height: 640px;
+      right: 0;
+      left: 0;
+      margin:10vh auto;
+      box-shadow: 40px 40px 0px #000;
+    }
+
+    h1 {
+      font-size: ${DS.fontSizes.lg}px;
+    }
+
     textarea,
     button {
       display: block;
       clear:both;
       width: 100%;
       margin: ${DS.gutters.sm}px auto ${DS.gutters.sm}px auto;
-      ${buttonStyle()}
     }
     textarea {
       width: 100%;
@@ -91,17 +207,42 @@ export function BaseStyles() {
     .nav {
       margin-top: ${DS.gutters.xl}px;
     }
-    .nav li {
-      display:inline-block;
+    .gifs {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
     }
-    .nav li.active a {
-      background: ${DS.colors.green};
-      color:  ${DS.colors.purple};
+    .gif {
+      position: absolute;
     }
-    .nav li a {
-      ${buttonStyle()}
-      margin-right: ${DS.gutters.sm}px;
+    .gifs img {
+      border: 1px solid;
     }
+    .gif small {
+      background: ${DS.colors.white};
+      margin: 0;
+      padding: ${DS.gutters.sm}px;
+      border: 1px solid;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+    ul li {
+      border-bottom: 2px dashed ${DS.colors.black};
+    }
+    ul li a {
+      padding: ${DS.gutters.sm}px;
+      display:block;
+    }
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
     @keyframes notification {
       from {bottom: -120vh;}
       to { bottom: 5vh; }

@@ -23,11 +23,11 @@ export function showNotifications(message: string) {
 
 export function handleJoroDemo(){
   if(STYLES.registry['baseStyles']){
-    state._update('updateBackground', { text:"/////Congrats, you deleted all css added by Joro/////", n: 200 })
+    state._update('updateBackground', { text:"/////Congrats, you unregistered a style node added by Joro/////", n: 200 })
     STYLES.remove('baseStyles', true);
   } else {
     BaseStyles()
-    state._update('updateBackground', { text:"/////Congrats, added css with Joro/////", n: 200 })
+    state._update('updateBackground', { text:"/////Congrats, you registered a style node added by Joro/////", n: 200 })
   }
 }
 

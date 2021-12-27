@@ -7,7 +7,7 @@
       "title": "*ヽ( ･3･)ﾉ*",
       "body": "yo i'm Alex King, AKA Stagfoo and welcome to my website. hope you like brutalism",
       "menu": [
-        { "name": "🪴 Libraries", "url": "/libraries"},
+        { "name": "🪴 Projects", "url": "/libraries"},
         { "name": "🕹️ Games", "url": "https://stagfoo.itch.io/"},
         { "name": "💽 Design", "url": "https://www.behance.net/stagfoo/"},
         { "name": "📓 Articles", "url": "https://dev.to/stagfoo"},

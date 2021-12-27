@@ -105,8 +105,11 @@ export function pageMutations(){
     border: none;
   }
   .page.chumbucket .center {
-    margin: 20vh auto;
+    margin: 0 auto;
     width: 50%;
+    background: #fff;
+    position: relative;
+    z-index: 9;
   }
   .chumbucket .emoji {
     position: absolute;

@@ -1,7 +1,6 @@
-import { handleButtonClick } from "./actions";
+import { handleJoroDemo, handleObakeDemo } from "./actions";
 import html from "nanohtml";
-import { routes } from "./store";
-import { notificationStyle, STYLES } from "styles";
+import { notificationStyle } from "styles";
 
 export function AppRoot(state) {
   const pageData = state.pages[state.currentPage.name];
@@ -57,6 +56,7 @@ export function routing(state) {
         <img src="${pageData.logo.url}" />
         <h1>${pageData.title}</h1>
         <p>${pageData.body}</p>
+        <button onclick=${handleJoroDemo}>👀 Demo</button>
         ${menuList(pageData.menu)}
       `;
     case "chumbucket":
@@ -75,6 +75,7 @@ export function routing(state) {
       <img src="${pageData.logo.url}" />
       <h1>${pageData.title}</h1>
       <p>${pageData.body}</p>
+      <button onclick=${handleObakeDemo}>👀 Demo</button>
         ${menuList(pageData.menu)}
 
       `;

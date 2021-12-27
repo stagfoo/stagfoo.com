@@ -99,8 +99,8 @@
     "title": "amico",
     "body": "a self hosted virtual event software. walk around in 3d & watch videos in the world. Still very wip",
     "menu": [
-      { "name": "🐈‍⬛ github", "url": ""},
-      { "name": "👀 demo", "url": ""},
+      { "name": "🐈‍⬛ github", "url": "https://github.com/stagfoo/amico"},
+      { "name": "👀 demo", "url": "https://glitch.com/edit/#!/amico-stagfoo"},
       { "name": "🔙 back", "url": "/libraries"}
     ],
     "logo": {

@@ -36,7 +36,6 @@
         "menu": [
           { "name": "📦 npm", "url": "https://www.npmjs.com/package/joro"},
           { "name": "🐈‍⬛ github", "url": "https://github.com/stagfoo/joro"},
-          { "name": "👀 demo", "url": "/joro?delete-all-css"},
           { "name": "🔙 back", "url": "/libraries"}
         ],
         "logo": {
@@ -66,9 +65,8 @@
     "title": "OBAKE.js",
     "body": "STATE MANAGEMENT so simple its spooky",
     "menu": [
-      { "name": "📦 npm", "url": ""},
-      { "name": "🐈‍⬛ github", "url": ""},
-      { "name": "👀 demo", "url": ""},
+      { "name": "📦 npm", "url": "https://www.npmjs.com/package/obake.js"},
+      { "name": "🐈‍⬛ github", "url": "https://github.com/stagfoo/obake"},
       { "name": "🔙 back", "url": "/libraries"}
     ],
     "logo": {
@@ -82,9 +80,10 @@
     "title": "deathmark",
     "body": "an app to help fine points of interest in long videos like video game streams",
     "menu": [
-      { "name": "📦 Donate", "url": ""},
-      { "name": "🐈‍⬛ github", "url": ""},
-      { "name": "👀 demo", "url": ""},
+      { "name": "🥫 Donate", "url": "https://ko-fi.com/stagfoo"},
+      { "name": "🐈‍⬛ github", "url": "https://github.com/stagfoo/deathmark"},
+      { "name": "👀 Download", "url": "https://ko-fi.com/post/DeathMark-W7W8381IO"},
+      { "name": "📓 Article", "url": "https://dev.to/basal/deathmark-programmatically-scan-videos-for-points-of-interest-11l1"},
       { "name": "🔙 back", "url": "/libraries"}
     ],
     "logo": {

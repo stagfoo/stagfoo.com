@@ -80,7 +80,7 @@
     "title": "deathmark",
     "body": "an app to help fine points of interest in long videos like video game streams",
     "menu": [
-      { "name": "🥫 Donate", "url": "https://ko-fi.com/stagfoo"},
+      { "name": "☕ Donate", "url": "https://ko-fi.com/stagfoo"},
       { "name": "🐈‍⬛ github", "url": "https://github.com/stagfoo/deathmark"},
       { "name": "👀 Download", "url": "https://ko-fi.com/post/DeathMark-W7W8381IO"},
       { "name": "📓 Article", "url": "https://dev.to/basal/deathmark-programmatically-scan-videos-for-points-of-interest-11l1"},

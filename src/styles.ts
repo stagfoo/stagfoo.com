@@ -143,10 +143,25 @@ export function pageMutations(){
   `
 }
 
+export function setBackground(font, bg, extra){
+  STYLES.add('background', `
+  .background {
+    background-color: ${font};
+    color:  ${bg};
+    ${extra}
+  }
+  `)
+}
+
 export function BaseStyles() {
   STYLES.add("baseStyles", `
     * {
       font-family: ${DS.fontFamily.alt};
+    }
+    #app {
+      position:relative;
+      height: 100vh;
+      overflow:hidden;
     }
     html,body {
       margin: 0;
@@ -154,7 +169,6 @@ export function BaseStyles() {
       color:  ${DS.colors.black};
       opacity: 1;
       height: 100vh;
-      overflow:hidden;
     }
 
     .background {
@@ -192,27 +206,13 @@ export function BaseStyles() {
       font-size: ${DS.fontSizes.lg}px;
     }
 
-    textarea,
-    button {
-      display: block;
-      clear:both;
-      width: 100%;
-      margin: ${DS.gutters.sm}px auto ${DS.gutters.sm}px auto;
-    }
-    textarea {
-      width: 100%;
-      min-height: 300px;
-      background: ${DS.colors.blue};
-      font-size: ${DS.fontSizes.xl}px;
-    }
-    .nav {
-      margin-top: ${DS.gutters.xl}px;
-    }
     .gifs {
       position: absolute;
       top: 0px;
       left: 0px;
       z-index: 1;
+      width: 100vw;
+      height: 100vh;
     }
     .gif {
       position: absolute;
@@ -225,6 +225,7 @@ export function BaseStyles() {
       margin: 0;
       padding: ${DS.gutters.sm}px;
       border: 1px solid;
+      float:left;
     }
 
 
@@ -240,8 +241,17 @@ export function BaseStyles() {
     }
     ul {
       list-style: none;
-      margin: 0px;
+      margin: ${DS.gutters.lg}px 0px 0px 0px;
       padding: 0px;
+    }
+    button {
+      cursor: pointer;
+      background: ${DS.colors.white};
+      border:1px solid;
+      border-radius: 4px;
+      padding: ${DS.gutters.sm}px;
+      display:inline-block;
+      width:auto;
     }
 
     @keyframes notification {

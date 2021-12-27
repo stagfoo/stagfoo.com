@@ -10,10 +10,6 @@ const HOME_PAGE = (ctx, next) => {
 const JORO = (ctx, next) => {
   BaseStyles();
   state._update('updateBackground', { text:"スパイダー", n: 1000 })
-  if(ctx.querystring == "delete-all-css"){
-    STYLES.remove('baseStyles', true);
-    state._update('updateBackground', { text:"Congrats, you deleted all css added by Joro", n: 1 })
-  }
   state._update('updateCurrentPage', 'joro')
 };
 const CHUMBUCKET = (ctx, next) => {

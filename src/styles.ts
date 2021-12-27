@@ -106,8 +106,8 @@ export function pageMutations(){
   }
   .page.chumbucket .center {
     margin: 0 auto;
-    width: 50%;
-    background: #fff;
+    max-width: 80%;
+    background: rgba(255,255,255,1);
     position: relative;
     z-index: 9;
   }
@@ -119,7 +119,7 @@ export function pageMutations(){
   }
   .chumbucket .emoji +   .emoji  {
     right: 80%;
-    top: 20%;
+    top: 32%;
   }
   .page.chumbucket img {
     position: absolute;

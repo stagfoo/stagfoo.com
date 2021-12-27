@@ -91,7 +91,7 @@
     },
     "gifs": [
       {"x": "54", "y": "100", "name": "nice-shot-cowboy.gif", "url": "https://media4.giphy.com/media/XtINMCqoEJrNAzBh0v/200w.webp?cid=ecf05e4724c5ua31io6vva9yvymc0wcza0llaeaigv7n3pmw&rid=200w.webp&ct=g"},
-      {"x": "533", "y": "543", "name": "clever-girl.gif", "url": "https://media3.giphy.com/media/KGdKKipVBu9vO5hKkb/giphy.gif?cid=ecf05e47qehw85h2wcl7lzd49duyg0b8r8rhkc69y4ybv088&rid=giphy.gif&ct=g"},
+      {"x": "533", "y": "231", "name": "clever-girl.gif", "url": "https://media3.giphy.com/media/KGdKKipVBu9vO5hKkb/giphy.gif?cid=ecf05e47qehw85h2wcl7lzd49duyg0b8r8rhkc69y4ybv088&rid=giphy.gif&ct=g"},
       {"x": "1500", "y": "126",  "name": "sad-pizza-girl.gif", "url":"https://media0.giphy.com/media/ha58eZNHokit4dtiBO/giphy.webp?cid=ecf05e47uijrj6e9v6dhgvlglzncjk01zria598qdww5ek64&rid=giphy.webp&ct=g"}
     ]
   },

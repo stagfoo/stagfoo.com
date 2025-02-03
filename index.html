@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander King</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-yellow {
+        background: rgb(254, 255, 203);
+      }
+      .bg-purple {
+        background: #bf71cf;
+      }
+      .hero-pfp {
+        height: 128px;
+        display: inline;
+      }
+    </style>
+    <script src="lib/card.js"></script>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"
+      integrity="sha512-MT5YyrGWqMGkIbwkVUZEWGrRDjlNx8loukEdFyzLo4s8INKVxnDQy2eFcpmnWGrFwJ+X8mRTQOJpWCayXz7+Og=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="bg-yellow py-16 text-center">
+      <div class="container mx-auto px-4">
+        <div class="mb-8 text-center">
+          <img
+            class="hero-pfp"
+            src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/banana3.png?v=1738226726589"
+            alt="Profile"
+            class="rounded-full mx-auto"
+          />
+        </div>
+<!--         <h1 class="text-4xl font-bold mb-2">Alex King</h1> -->
+        <h4 class="text-xl font-bold mb-2 opacity-half">Stagfoo</h4>
+        <p class="text-xl">Indie Illustrator and Developer</p>
+        <ul class="flex justify-center gap-8 mt-8">
+          <li>
+            <a href="https://www.etsy.com/shop/Stagfoo"
+              ><img
+                width="45px"
+                height="45px"
+                src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/HiPaint_1738302193931.png?v=1738302562485"
+              />
+              <small>Etsy</small></a
+            >
+          </li>
+          <li>
+            <a href="https://stagfoo.itch.io/"
+              ><img
+                width="45px"
+                height="45px"
+                src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/HiPaint_1738302197096.png?v=1738302558689"
+              />
+              <small>Itch.io</small></a
+            >
+          </li>
+          <li>
+            <a href="https://ko-fi.com/stagfoo">
+              <img
+                width="45px"
+                height="45px"
+                src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/HiPaint_1738302200184.png?v=1738302554486"
+              />
+              <small>Kofi</small></a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img
+                width="45px"
+                height="45px"
+                src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/HiPaint_1738302398853.png?v=1738302541061"
+              />
+              <small>Fiver</small>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.amazon.com.au/Kappa-Climbs-Japanese-Childrens-Interactive/dp/B0DLTNF5RG/ref=sr_1_1?crid=2J0106OJIEAOY&dib=eyJ2IjoiMSJ9.jxS2Mj8jhsjHFHBpGZGNGw.llDzNKOvjAz4eav7qxgRh2IQDCVDBuuV7DoRNAFQByw&dib_tag=se&keywords=kappa+climbs&qid=1738288285&sprefix=Kappa+climbs%2Caps%2C824&sr=8-1"
+              ><img
+                width="45px"
+                height="45px"
+                src="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/HiPaint_1738302356331.png?v=1738302548754"
+              />
+              <small>Books</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Shop</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Row 1 -->
+        <product-card
+          image="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/bunny-1-emote-thumbnail.jpg?v=1738283020130"
+          title="Adorable White Bunny Emotes"
+          price="AU $4.00"
+          description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
+          link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
+          tags=""
+        ></product-card>
+        <product-card
+          image="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/bonk-bunny.webp?v=1738283528258"
+          title="Bonk the Bunny Emotes"
+          description="8 Cute Rabbit Twitch Emotes in 1 Sizes!"
+          price="AU $4.00"
+          link=""
+          tags=""
+        ></product-card>
+        <product-card
+          image="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/thumbnail1.webp?v=1738294174197"
+          title="Cute Elf PNGtuber Model"
+          description="4 Expressions  + bonus, Ash Hair"
+          price="AU $10.00"
+          link=""
+          tags=""
+        ></product-card>
+        <!-- Row 2          -->
+        <product-card
+          image="https://cdn.glitch.global/25cc486b-41c9-433d-8087-4470195f8fb5/il_fullxfull.5810502728_o7lq.jpg?v=1738294436027"
+          title="PNGTuber Adorable Frog Emotes"
+          price="AU $10.00"
+          description="3 expressions,  8 Cute frog Twitch Emotes!"
+          link=""
+          tags=""
+        ></product-card>
+        <product-card
+          image="https://placehold.co/500x500/EEE/31343C"
+          title="Adorable White Bunny Emotes - 8 Cute Rabbit Twitch Emotes in 6 Sizes!"
+          price="$99"
+          link=""
+          tags=""
+        ></product-card>
+
+      </div>
+    </div>
+    <!-- Newsletter Section -->
+    <div class="bg-yellow py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+        <p class="text-gray-600 mb-8">
+          Subscribe to my newsletter for updates on new projects and releases!
+        </p>
+        <form class="max-w-md mx-auto">
+          <div class="flex gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+              required
+            />
+            <button
+              type="submit"
+              class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple text-white py-12 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <p>Email: yo@stagfoo.com</p>
+            <p>Location: Queensland, Australia</p>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Me</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors">X</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Cava</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Shop Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Shop</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Etsy Store</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >itch.io</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Ko-fi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Fiverr</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 pt-8 border-t border-gray-100">
+          <p>&copy; 2025 Alexander King. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

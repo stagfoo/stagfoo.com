@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable Elements with CSS Editor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.css"
+    />
+    <script src="/lib/editor.js"></script>
+    <script src="/lib/copy-to-clipboard.js"></script>
+    <style>
+      body {
+        font-family: monospace;
+      }
+      h1, {
+        font-family: "Work Sans"
+      }
+      drag-box {
+        background: transparent;
+        border-radius: 8px;
+        box-shadow: none;
+      }
+      .rounded {
+        border-radius: 8px;
+      }
+      .card1 {
+        background: rgb(65, 107, 74);
+        color: #fff;
+      }
+      .card2 {
+        background: rgb(114, 185, 219);
+         color: #fff;
+      }
+      .card3 {
+        background: rgb(20, 36, 159);
+        color: #fff;
+      }
+      .card4 {
+        background: #ff842a;
+        color: #fff;
+      }
+      body {
+        background: rgb(254, 222, 199);
+      }
+      img {
+        width: 100%;
+      }
+      span {
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="copyMainContent()">Copy</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/css/css.min.js"></script>
+<main>
+
+
+    <drag-box style="transform: translate3d(433px, 5px, 0px); width: 200px; height: 100px;" x="433" y="5">
+      <img src="https://i.giphy.com/OQ6QPBMwdjzZ6Q5T2X.webp" contenteditable="false" style="cursor: inherit; width: 100%">
+    </drag-box>
+    <drag-box x="398" y="191" style="transform: translate3d(398px, 191px, 0px); width: 277px; height: 100px;">
+      <h1>Anatomy of a game</h1>
+    </drag-box>
+    <drag-box x="372" y="245" style="transform: translate3d(372px, 245px, 0px); width: 329px; height: 40px;">
+      <p contenteditable="false" style="cursor: inherit">
+        how I break down games so I can build them
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(226px, 353px, 0px); width: 200px; height: 100px;" x="226" y="353">
+      <h2>Graphics</h2>
+    </drag-box>
+    <drag-box style="transform: translate3d(63px, 943px, 0px); width: 222px; height: 142px;" x="63" y="943">
+      <p contenteditable="false" style="cursor: inherit">
+        This is the look and style of a game. The more realist your game the
+        more “graphical debt” you hold because once its set all new content has
+        to match the same style.
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(526px, 976px, 0px); width: 200px; height: 100px;" x="526" y="976">
+      <p contenteditable="false" style="cursor: inherit">
+        Indie games are known of making style more important than highly detail
+        graphics to avoid graphical debt.
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(677px, 460px, 0px); width: 200px; height: 100px;" x="677" y="460"><img src="https://asset.mmm.dev/a3/4bd268821c401ca1dd498c3d7af63f/2p03ax.png?width=256" contenteditable="false" style="cursor: inherit; width: 100%"></drag-box>
+    <drag-box class="card1" style="transform: translate3d(504px, 592px, 0px); width: 283px; height: 73px;" x="504" y="592">
+      <p contenteditable="false" style="cursor: inherit;">
+        Goose Game is 3d and mostly all solid colors so debt was reduced by not
+        including textures
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(389px, 712px, 0px); width: 292px; height: 84px; z-index: 4;" x="389" y="712" class="card4">
+      <p contenteditable="false" style="cursor: inherit;">
+        Super hot is 3d but is it very stylised and only uses 3 colors and odd
+        movements so it have a low graphical debt
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(360px, 837px, 0px); width: 458px; height: 52px;" x="360" y="837">
+      <p>
+        Monster hunter is very beautiful by it took many many people 4 years
+        full time to make.
+      </p></drag-box>
+    <drag-box style="transform: translate3d(777px, 964px, 0px); width: 200px; height: 100px;" x="777" y="964">
+      <p>
+        Minecraft has simple graphics that allows for simple animations allowing
+        for rapid content additions
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1273px, 827px, 0px); width: 200px; height: 100px;" x="1273" y="827">
+      <p>
+        Baba is you is basic but beautiful. It’s easy to add more assets and
+        grow the game. which is important in a puzzle game
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1055px, 923px, 0px); width: 204px; height: 133px;" x="1055" y="923">
+      <p>
+        Imagine if Baba is you had the same Graphics as Monster hunter world,
+        <br>
+        the time/effort of the game would be huge even though the gameplay
+        didn’t change
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(24px, 846px, 0px); width: 158px; height: 41px;" x="24" y="846"><p>Point 1 to remember</p></drag-box>
+    <drag-box style="transform: translate3d(1054px, 826px, 0px); width: 200px; height: 100px;" x="1054" y="826"><h1>Graphical Debt</h1></drag-box>
+    <drag-box style="transform: translate3d(1031px, 647px, 0px); width: 222px; height: 141px;" x="1031" y="647"><p>
+        “the amount of time and effort that goes into creating the visuals of a
+        new component of your game because it has to match the previous style.”
+      </p></drag-box>
+    <drag-box style="transform: translate3d(1035px, 471px, 0px); width: 206px; height: 133px;" x="1035" y="471">
+      <p>
+        How I have been trying to avoiding this is moving to 2.5D textures like
+        Mario Kart 64 or Doom. I can do all the camera types and it’s easy to
+        make, animate and program
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(0px, 642px, 0px); width: 200px; height: 100px;" x="-5" y="642"><h1>Camera</h1></drag-box>
+    <drag-box style="transform: translate3d(1277px, 579px, 0px); width: 223px; height: 188px;" x="1277" y="579"><p>
+        When designing a new game; the camera will inform your choices on
+        mechanics, physics, graphics and level design. You may not need physics
+        if the camera is isometric or top down like pokemon but making a first
+        person shooter will almost always need physics.
+      </p></drag-box>
+    <drag-box style="transform: translate3d(217px, 440px, 0px); width: 123px; height: 25px;" x="217" y="440"><span>Visual Novel</span></drag-box>
+    <drag-box style="transform: translate3d(167px, 248px, 0px); width: 154px; height: 53px;" x="167" y="248"><span>Top down(2d)</span></drag-box>
+    <drag-box style="transform: translate3d(177px, 106px, 0px); width: 88px; height: 34px;" x="177" y="106"><span>Isometric</span></drag-box>
+    <drag-box style="transform: translate3d(13px, 128px, 0px); width: 200px; height: 100px;" x="13" y="128"><span>Third person</span></drag-box>
+    <drag-box style="transform: translate3d(155px, 164px, 0px); width: 126px; height: 40px;" x="155" y="164"><span>Side scroller</span></drag-box>
+    <drag-box style="transform: translate3d(0px, 198px, 0px); width: 127px; height: 27px;" x="-5" y="198"><span>First person</span></drag-box>
+    <drag-box style="transform: translate3d(766px, 244px, 0px); width: 200px; height: 100px;" x="766" y="244"><p>Take camera into account when choosing mechanics</p></drag-box>
+    <drag-box style="transform: translate3d(0px, 481px, 0px); width: 200px; height: 100px;" x="-12" y="481">
+      <h1 contenteditable="false" style="cursor: inherit;">Mechanics</h1>
+    </drag-box>
+    <drag-box style="transform: translate3d(766px, 137px, 0px); width: 200px; height: 100px;" x="766" y="137">
+      <p>
+        Game mechanics are the tools you give the player to play the game with.
+      </p>
+    </drag-box>
+      <drag-box style="transform: translate3d(1311px, 25px, 0px); width: 200px; height: 100px;" x="1311" y="25">
+      <p>
+        Pacman eats the fruit, kills the ghost
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1278px, 300px, 0px); width: 200px; height: 100px;" x="1278" y="300">
+      <p>
+        In Pokemon, you can try to catch pokemon
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1281px, 433px, 0px); width: 200px; height: 100px;" x="1281" y="433">
+      <p>
+        In Animal Crossing you can catch bugs with a net that breaks over time.
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1040px, 338px, 0px); width: 200px; height: 100px;" x="1040" y="338">
+      <p>
+        In Mario, you jump on enemies to kill them
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(0px, 348px, 0px); width: 200px; height: 100px;" x="-14" y="348">
+    <h1>
+      Systems
+      </h1>
+    </drag-box>
+    <drag-box style="transform: translate3d(1046px, 150px, 0px); width: 189px; height: 147px;" x="1046" y="150">
+    <p>
+      systems are groups of game mechanics that work together. For example Pokemon and Final Fantasy have very similar battle systems they just framed differently
+      </p>
+    </drag-box>
+        <drag-box style="transform: translate3d(209px, 510px, 0px); width: 133px; height: 53px;" x="209" y="510">
+    <p>
+      Team building
+<br>Leveling up
+      </p>
+    </drag-box>
+    <drag-box style="transform: translate3d(1277px, 167px, 0px); width: 200px; height: 100px;" x="1277" y="167">
+    <p>Evolving is basically the same mechanic as Changing Jobs</p>
+    </drag-box>
+
+</main>
+  </body>
+</html>

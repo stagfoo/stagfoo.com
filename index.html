@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander King</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-yellow {
+        background: rgb(254, 255, 203);
+      }
+      .bg-purple {
+        background: #bf71cf;
+      }
+      .hero-pfp {
+        height: 128px;
+        display: inline;
+      }
+    </style>
+    <script src="lib/card.js"></script>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"
+      integrity="sha512-MT5YyrGWqMGkIbwkVUZEWGrRDjlNx8loukEdFyzLo4s8INKVxnDQy2eFcpmnWGrFwJ+X8mRTQOJpWCayXz7+Og=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div class="bg-yellow py-16 text-center">
+      <div class="container mx-auto px-4">
+        <div class="mb-8 text-center">
+          <img
+            class="hero-pfp"
+            src="assets/banana3.png"
+            alt="Profile"
+            class="rounded-full mx-auto"
+          />
+        </div>
+<!--         <h1 class="text-4xl font-bold mb-2">Alex King</h1> -->
+        <h4 class="text-xl font-bold mb-2 opacity-half">Stagfoo</h4>
+        <p class="text-xl">Indie Illustrator and Developer</p>
+        <ul class="flex justify-center gap-8 mt-8">
+          <li>
+            <a href="https://www.etsy.com/shop/Stagfoo"
+              ><img
+                width="45px"
+                height="45px"
+                src="/assets/HiPaint_1738302193931.png?v=1738302562485"
+              />
+              <small>Etsy</small></a
+            >
+          </li>
+          <li>
+            <a href="https://stagfoo.itch.io/"
+              ><img
+                width="45px"
+                height="45px"
+                src="assets/HiPaint_1738302197096.png?v=1738302558689"
+              />
+              <small>Itch.io</small></a
+            >
+          </li>
+          <li>
+            <a href="https://ko-fi.com/stagfoo">
+              <img
+                width="45px"
+                height="45px"
+                src="assets/HiPaint_1738302200184.png?v=1738302554486"
+              />
+              <small>Kofi</small></a
+            >
+          </li>
+             <li>
+            <a
+              href="https://www.amazon.com.au/Kappa-Climbs-Japanese-Childrens-Interactive/dp/B0DLTNF5RG/ref=sr_1_1?crid=2J0106OJIEAOY&dib=eyJ2IjoiMSJ9.jxS2Mj8jhsjHFHBpGZGNGw.llDzNKOvjAz4eav7qxgRh2IQDCVDBuuV7DoRNAFQByw&dib_tag=se&keywords=kappa+climbs&qid=1738288285&sprefix=Kappa+climbs%2Caps%2C824&sr=8-1"
+              ><img
+                width="45px"
+                height="45px"
+                src="assets/HiPaint_1738302356331.png?v=1738302548754"
+              />
+              <small>Books</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Shop</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Row 1 -->
+        <product-card
+          image="assets/Adorable_White_Bunny_Emotes.jpg"
+          title="Adorable White Bunny Emotes"
+          price="AU $4.00"
+          description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
+          link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
+          tags=""
+        ></product-card>
+        <product-card
+          image="assets/Cute_Elf_PNGtuber_Model.webp"
+          title="Cute Elf PNGtuber Model"
+          description="4 Expressions  + bonus, Ash Hair"
+          price="AU $10.00"
+          link=""
+          tags=""
+        ></product-card>
+        <!-- Row 2          -->
+        <product-card
+          image="assets/PNGTuber_Adorable_Frog_Emotes.jpg"
+          title="PNGTuber Adorable Frog Emotes"
+          price="AU $10.00"
+          description="3 expressions,  8 Cute frog Twitch Emotes!"
+          link=""
+          tags=""
+        ></product-card>
+        <product-card
+          image="assets/Adorable_White_Bunny_Emotes.jpg"
+          title="Adorable White Bunny Emotes"
+          price="AU $4.00"
+          description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
+          link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
+          tags=""
+        ></product-card>
+        <product-card
+          image="assets/Bonk_the_Bunny_Emotes.webp"
+          title="Bonk the Bunny Emotes"
+          description="8 Cute Rabbit Twitch Emotes in 1 Sizes!"
+          price="AU $4.00"
+          link=""
+          tags=""
+        ></product-card>
+
+        <!-- Products from Etsy Listings Download -->
+        <product-card
+          image="assets/Chibi_Bunny_Girl_PNGtuber_Model_Mouth_Blinking_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Chibi Bunny Girl PNGtuber Model , Mouth + Blinking , Streamer Vtuber , Discord & Twitch"
+          price="AUD 10"
+          description="💖✨ Super chibi bunny girl Animal crossing style PNG TUBER ✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi"
+        ></product-card>
+        <product-card
+          image="assets/Animated_Twitch_Emote_1x_Animated_Frog_Twitch_Meme_Emotes_Cute_Knife_Meme_Twitch_Streamer_Youtube_Discord_Animated_emotes.jpg"
+          title="Animated Twitch Emote 1x Animated Frog Twitch Meme Emotes - Cute Knife Meme , Twitch , Streamer , Youtube , Discord, Animated emotes"
+          price="AUD 5.5"
+          description="The video example its longer and includes a background. The product is short and is transparent"
+          link=""
+          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote"
+        ></product-card>
+        <product-card
+          image="assets/Frog_PNGTuber_addon1.webp"
+          title="Extra Emotions Pack - Adorable Frog PNGTuber - 3 expressions"
+          price="AUD 5"
+          description="🐸💖✨ Frog  PNG TUBER ✨💖🐸"
+          link=""
+          tags="twitch_emotes,cute_emote_pack,twitch_graphics,emote_pack,twitch_pack,emote_bundle"
+        ></product-card>
+        <product-card
+          image="assets/Adorable_Frog_Emotes_8_Cute_frog_Twitch_Emotes_emote_pack_kawaii_emotes_streamer_emotes_frog_emotes.jpg"
+          title="Adorable Frog Emotes - 8 Cute frog Twitch Emotes | emote pack | kawaii emotes | streamer emotes | frog emotes"
+          price="AUD 4"
+          description="premade 8 cute frog emotes for twitch / discord"
+          link=""
+          tags="twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,frog_emote,frog_twitch_emotes,frog_badges"
+        ></product-card>
+        <product-card
+          image="assets/Sticky_Notes_PNG_Stickers_digital_stickers_digital_stickers_notability_digital_stickers_art_digital_stickersheet.jpg"
+          title="Sticky Notes PNG Stickers | digital stickers | digital stickers notability | digital stickers art | digital stickersheet"
+          price="AUD 2.5"
+          description="premade 8 cute sticky notepad digital stickers for penly & goodnotes & notability"
+          link=""
+          tags="digital_stickers,stickers_notability,stickers_ipad,Digital_Sticker_Fall,digital_sticker_cute,digital_stickers_art,digital_stickersheet,stickers_printable"
+        ></product-card>
+        <product-card
+          image="assets/Chibi_Boy_PNGtuber_Model_Mouth_Blinking_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Chibi Boy PNGtuber Model , Mouth + Blinking , Streamer Vtuber , Discord & Twitch"
+          price="AUD 10"
+          description="💖✨ Super chibi Animal crossing style PNG TUBER ✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi"
+        ></product-card>
+        <product-card
+          image="assets/Cute_Bear_PNGtuber_Model_3_Expressions_Blinking_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Cute Bear PNGtuber Model , 3 Expressions + Blinking , Streamer Vtuber , Discord & Twitch"
+          price="AUD 10"
+          description="💖✨ Cute Bear PNG TUBER ✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,pastel,pastal,virtual_youtuber,twitch,bear,white_bear,cute_animal,kawaii_animal"
+        ></product-card>
+        <product-card
+          image="assets/Sticky_Note_accessory_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Sticky Note accessory Streamer Vtuber , Discord & Twitch"
+          price="AUD 4"
+          description="chibi vtuber post it notes, designed for the chibi vtuber products✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi,blanket"
+        ></product-card>
+        <product-card
+          image="assets/Chibi_Blanket_accessory_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Chibi Blanket accessory Streamer Vtuber , Discord & Twitch"
+          price="AUD 5"
+          description="chibi vtuber blankets, designed for the chibi vtuber products✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi,blanket"
+        ></product-card>
+        <product-card
+          image="assets/Chibi_Girl_PNGtuber_Model_Mouth_Blinking_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Chibi Girl PNGtuber Model , Mouth + Blinking , Streamer Vtuber , Discord & Twitch"
+          price="AUD 10"
+          description="💖✨ Super chibi Animal crossing style PNG TUBER ✨💖"
+          link=""
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi"
+        ></product-card>
+        <product-card
+          image="assets/Animated_Twitch_Emote_1x_Animated_Bunny_Twitch_Meme_Emotes_Cute_Knife_Meme_Twitch_Streamer_Youtube_Discord_Animated_emotes.jpg"
+          title="Animated Twitch Emote 1x Animated Bunny Twitch Meme Emotes - Cute Knife Meme , Twitch , Streamer , Youtube , Discord, Animated emotes"
+          price="AUD 5.5"
+          description="The video example its longer and includes a background. The product is short and is transparent"
+          link=""
+          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote"
+        ></product-card>
+        <product-card
+          image="assets/Cute_Magic_Girl_PNGtuber_Model_4_Expressions_Blue_Hair_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Cute Magic Girl PNGtuber Model , 4 Expressions , Blue Hair , Streamer Vtuber , Discord & Twitch"
+          price="AUD 10"
+          description="💖✨ Sparkling PNG TUBER ✨💖"
+          link=""
+          tags="vtuber,pngtuber,magic_girl,cute_anime,kawaii,pastel,pastal,magic_girl_vtuber,virtual_youtuber,twitch"
+        ></product-card>
+
+      </div>
+    </div>
+    <!-- Newsletter Section -->
+    <div class="bg-yellow py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+        <p class="text-gray-600 mb-8">
+          Subscribe to my newsletter for updates on new projects and releases!
+        </p>
+        <form class="max-w-md mx-auto">
+          <div class="flex gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+              required
+            />
+            <button
+              type="submit"
+              class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple text-white py-12 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <p>Email: <a href="mailto:yo@stagfoo.com">yo@stagfoo.com</</p>
+            <p>Location: Queensland, Australia</p>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Me</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://x.com/stagfoo" class="hover:text-blue-400 transition-colors">X</a>
+              </li>
+              <li>
+                <a href="https://jp.linkedin.com/in/stagfoo" class="hover:text-blue-400 transition-colors"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/stagfoo" class="hover:text-blue-400 transition-colors"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Shop Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Shop</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Etsy Store</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >itch.io</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Ko-fi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 pt-8 border-t border-gray-100">
+          <p>&copy; 2025 Alexander King. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

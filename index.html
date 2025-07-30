@@ -89,17 +89,26 @@
     </div>
 
     <!-- Portfolio Grid -->
-    <div class="container mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-center mb-12">Shop</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="products" class="container mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center mb-4">Shop</h2>
+      <!-- <input type="text" name="search" class="fuzzy-search" /> -->
+      <!-- <div class="flex justify-center gap-4 mb-8">
+        <button onclick="setSearch(event)" class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="rabbit">🐰</button>
+        <button onclick="setSearch(event)"  class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="frog">🐸</button>
+        <button onclick="setSearch(event)"  class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="elf">🧝</button>
+        <button onclick="setSearch(event)"  class="filter-btn text-xl px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="all">All</button> -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list">
         <!-- Row 1 -->
         <product-card
           image="assets/Adorable_White_Bunny_Emotes.jpg"
           title="Adorable White Bunny Emotes"
           price="AU $4.00"
           description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
-          link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
-          tags=""
+          stripe-link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
+          etsy-link="https://www.etsy.com/shop/Stagfoo"
+          kofi-link="https://ko-fi.com/stagfoo"
+          tags="rabbit, bunny"
         ></product-card>
         <product-card
           image="assets/Cute_Elf_PNGtuber_Model.webp"
@@ -107,7 +116,7 @@
           description="4 Expressions  + bonus, Ash Hair"
           price="AU $10.00"
           link=""
-          tags=""
+          tags="elf"
         ></product-card>
         <!-- Row 2          -->
         <product-card
@@ -116,15 +125,7 @@
           price="AU $10.00"
           description="3 expressions,  8 Cute frog Twitch Emotes!"
           link=""
-          tags=""
-        ></product-card>
-        <product-card
-          image="assets/Adorable_White_Bunny_Emotes.jpg"
-          title="Adorable White Bunny Emotes"
-          price="AU $4.00"
-          description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
-          link="https://buy.stripe.com/5kA6rg9ek0ZNfe0145"
-          tags=""
+          tags="frog"
         ></product-card>
         <product-card
           image="assets/Bonk_the_Bunny_Emotes.webp"
@@ -132,7 +133,7 @@
           description="8 Cute Rabbit Twitch Emotes in 1 Sizes!"
           price="AU $4.00"
           link=""
-          tags=""
+          tags="rabbit, bunny"
         ></product-card>
 
         <!-- Products from Etsy Listings Download -->
@@ -142,7 +143,7 @@
           price="AUD 10"
           description="💖✨ Super chibi bunny girl Animal crossing style PNG TUBER ✨💖"
           link=""
-          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi"
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi,rabbit,bunny"
         ></product-card>
         <product-card
           image="assets/Animated_Twitch_Emote_1x_Animated_Frog_Twitch_Meme_Emotes_Cute_Knife_Meme_Twitch_Streamer_Youtube_Discord_Animated_emotes.jpg"
@@ -150,7 +151,7 @@
           price="AUD 5.5"
           description="The video example its longer and includes a background. The product is short and is transparent"
           link=""
-          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote"
+          tags="frog,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,emote_pack,streamer_emotes,animated_emote"
         ></product-card>
         <product-card
           image="assets/Frog_PNGTuber_addon1.webp"
@@ -158,7 +159,7 @@
           price="AUD 5"
           description="🐸💖✨ Frog  PNG TUBER ✨💖🐸"
           link=""
-          tags="twitch_emotes,cute_emote_pack,twitch_graphics,emote_pack,twitch_pack,emote_bundle"
+          tags="frog,twitch_emotes,cute_emote_pack,twitch_graphics,emote_pack,twitch_pack,emote_bundle"
         ></product-card>
         <product-card
           image="assets/Adorable_Frog_Emotes_8_Cute_frog_Twitch_Emotes_emote_pack_kawaii_emotes_streamer_emotes_frog_emotes.jpg"
@@ -166,7 +167,7 @@
           price="AUD 4"
           description="premade 8 cute frog emotes for twitch / discord"
           link=""
-          tags="twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,frog_emote,frog_twitch_emotes,frog_badges"
+          tags="frog,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,emote_pack,streamer_emotes,animated_emote,frog_emote,frog_twitch_emotes,frog_badges"
         ></product-card>
         <product-card
           image="assets/Sticky_Notes_PNG_Stickers_digital_stickers_digital_stickers_notability_digital_stickers_art_digital_stickersheet.jpg"
@@ -222,15 +223,15 @@
           price="AUD 5.5"
           description="The video example its longer and includes a background. The product is short and is transparent"
           link=""
-          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote"
+          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote,rabbit"
         ></product-card>
         <product-card
-          image="assets/Cute_Magic_Girl_PNGtuber_Model_4_Expressions_Blue_Hair_Streamer_Vtuber_Discord_Twitch.jpg"
+          image ="assets/Cute_Magic_Girl_PNGtuber_Model_4_Expressions_Blue_Hair_Streamer_Vtuber_Discord_Twitch.jpg"
           title="Cute Magic Girl PNGtuber Model , 4 Expressions , Blue Hair , Streamer Vtuber , Discord & Twitch"
           price="AUD 10"
           description="💖✨ Sparkling PNG TUBER ✨💖"
           link=""
-          tags="vtuber,pngtuber,magic_girl,cute_anime,kawaii,pastel,pastal,magic_girl_vtuber,virtual_youtuber,twitch"
+          tags="vtuber,pngtuber,magic_girl,cute_anime,kawaii,pastel,pastal,magic_girl_vtuber,virtual_youtuber,twitch,elf"
         ></product-card>
 
       </div>
@@ -320,5 +321,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      var options = {
+        valueNames: [
+          { name: 'title', attr: 'title' },
+          { name: 'tags', attr: 'tags' }
+        ]
+      };
+      var productList = new List('products', options);
+
+      function setSearch(e) {
+        var searchInput = document.querySelector('.fuzzy-search');
+        searchInput.value = e.target.dataset.filter; 
+        if (searchInput.value === 'all') {
+          searchInput.value = '';
+          productList.filter(); // Show all products
+        }
+      }
+      
+    </script>
   </body>
 </html>

@@ -1,9 +1,3 @@
-# Adding a New Product to Your Store 💖
-
-Hello, my dear! Here is your very own guide to adding a new product to your beautiful store. Just follow these simple steps, and you'll have a new product ready to sell in no time! (´｡• ᵕ •｡`) ♡
-
----
-
 ### **Step 1: Create Your Product in Stripe ✨**
 
 First, we need to create the product and a payment link in your Stripe account.

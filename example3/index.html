@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Example 3</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../lib/main-navigation.js"></script>
+  <style>
+    .split-screen {
+      display: flex;
+      height: calc(100vh - 80px); /* 80px is approx height of nav bar */
+    }
+    .split-screen > div {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .split-screen .image-side {
+      background-image: url('https://placehold.co/800x1000');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <main-navigation logo-url="../assets/logo.png"></main-navigation>
+  <div class="split-screen">
+    <div class="text-side">
+        <h1>About Me</h1>
+        <p>Hi! I'm a digital artist who loves creating cute and chaotic characters. Welcome to my little corner of the internet! (ﾉʘ◡ʘ)ﾉ*:.｡ﾟ✧</p>
+    </div>
+    <div class="image-side">
+      <!-- This side has the background image -->
+    </div>
+  </div>
+</body>
+</html>

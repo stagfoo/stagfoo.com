@@ -3,140 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mermaid</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Mermaid</title>
   <link rel="stylesheet" href="../style.css">
+  <script src="../lib/main-navigation.js"></script>
+  <script src="../lib/card.js"></script>
+  <style>
+    body {
+      background-image: url('../assets/grid.svg');
+    }
+    .character-profile-3 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="bg-yellow py-16 text-center">
-      <div class="container mx-auto px-4">
-        <div class="mb-8 text-center">
-          <img
-            class="hero-pfp"
-            src="../assets/banana3.png"
-            alt="Profile"
-            class="rounded-full mx-auto"
-          />
-        </div>
-<!--         <h1 class="text-4xl font-bold mb-2">Alex King</h1> -->
-        <h4 class="text-xl font-bold mb-2 opacity-half">Stagfoo</h4>
-        <p class="text-xl">Indie Illustrator and Developer</p>
-        <ul class="flex justify-center gap-8 mt-8">
-          <li>
-            <a href="https://www.etsy.com/shop/Stagfoo"
-              ><img
-                width="45px"
-                height="45px"
-                src="/assets/HiPaint_1738302193931.png?v=1738302562485"
-              />
-              <small>Etsy</small></a
-            >
-          </li>
-          <li>
-            <a href="https://stagfoo.itch.io/"
-              ><img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302197096.png?v=1738302558689"
-              />
-              <small>Itch.io</small></a
-            >
-          </li>
-          <li>
-            <a href="https://ko-fi.com/stagfoo">
-              <img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302200184.png?v=1738302554486"
-              />
-              <small>Kofi</small></a
-            >
-          </li>
-             <li>
-            <a
-              href="https://www.amazon.com.au/Kappa-Climbs-Japanese-Childrens-Interactive/dp/B0DLTNF5RG/ref=sr_1_1?crid=2J0106OJIEAOY&dib=eyJ2IjoiMSJ9.jxS2Mj8jhsjHFHBpGZGNGw.llDzNKOvjAz4eav7qxgRh2IQDCVDBuuV7DoRNAFQByw&dib_tag=se&keywords=kappa+climbs&qid=1738288285&sprefix=Kappa+climbs%2Caps%2C824&sr=8-1"
-              ><img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302356331.png?v=1738302548754"
-              />
-              <small>Books</small>
-            </a>
-          </li>
+  <main-navigation logo-url="../assets/logo.svg"></main-navigation>
+  <div class="container">
+    <div class="character-profile-3">
+      <div class="character-info">
+        <h2>Mermaid</h2>
+        <h3>Likes:</h3>
+        <ul>
+          <li>Collecting shells</li>
+          <li>Singing</li>
+          <li>Playing with her squid friend</li>
+        </ul>
+        <h3>Dislikes:</h3>
+        <ul>
+          <li>Pollution</li>
+          <li>Getting tangled in seaweed</li>
         </ul>
       </div>
+      <!-- 
+        Image of the character standing next to a mini version of themselves.
+        The background should be a single color version of their house.
+      -->
+      <img src="https://placehold.co/400x600" alt="Character Profile Photo">
     </div>
-
-  <main class="container mx-auto px-4 py-16">
-    <img src="https://picsum.photos/seed/mermaid/800/400" alt="A placeholder image of the Mermaid">
-    <h1>The Mermaid</h1>
-    <p>A sweet mermaid who lives in the bay. She loves collecting shells and singing to her best friend, a curious little Squid.</p>
-    
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <!-- Product cards will go here -->
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-purple text-white py-12 mt-auto">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Contact Info -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Contact</h3>
-            <p>Email: <a href="mailto:yo@stagfoo.com">yo@stagfoo.com</</p>
-            <p>Location: Queensland, Australia</p>
-          </div>
-
-          <!-- Social Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Follow Me</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="https://x.com/stagfoo" class="hover:text-blue-400 transition-colors">X</a>
-              </li>
-              <li>
-                <a href="https://jp.linkedin.com/in/stagfoo" class="hover:text-blue-400 transition-colors"
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/stagfoo" class="hover:text-blue-400 transition-colors"
-                  >GitHub</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Shop Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Shop</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >Etsy Store</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >itch.io</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >Ko-fi</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="text-center mt-8 pt-8 border-t border-gray-100">
-          <p>&copy; 2025 Alexander King. All rights reserved.</p>
-        </div>
+    <div class="character-products">
+      <h3>Products featuring this character:</h3>
+      <div class="product-grid">
+        
       </div>
-    </footer>
+    </div>
+  </div>
 </body>
 </html>

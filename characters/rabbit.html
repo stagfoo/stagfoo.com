@@ -3,140 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Rabbit</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Rabbit</title>
   <link rel="stylesheet" href="../style.css">
+  <script src="../lib/main-navigation.js"></script>
+  <script src="../lib/card.js"></script>
+  <style>
+    body {
+      background-image: url('../assets/grid.svg');
+    }
+    .character-profile-3 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div class="bg-yellow py-16 text-center">
-      <div class="container mx-auto px-4">
-        <div class="mb-8 text-center">
-          <img
-            class="hero-pfp"
-            src="../assets/banana3.png"
-            alt="Profile"
-            class="rounded-full mx-auto"
-          />
-        </div>
-<!--         <h1 class="text-4xl font-bold mb-2">Alex King</h1> -->
-        <h4 class="text-xl font-bold mb-2 opacity-half">Stagfoo</h4>
-        <p class="text-xl">Indie Illustrator and Developer</p>
-        <ul class="flex justify-center gap-8 mt-8">
-          <li>
-            <a href="https://www.etsy.com/shop/Stagfoo"
-              ><img
-                width="45px"
-                height="45px"
-                src="/assets/HiPaint_1738302193931.png?v=1738302562485"
-              />
-              <small>Etsy</small></a
-            >
-          </li>
-          <li>
-            <a href="https://stagfoo.itch.io/"
-              ><img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302197096.png?v=1738302558689"
-              />
-              <small>Itch.io</small></a
-            >
-          </li>
-          <li>
-            <a href="https://ko-fi.com/stagfoo">
-              <img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302200184.png?v=1738302554486"
-              />
-              <small>Kofi</small></a
-            >
-          </li>
-             <li>
-            <a
-              href="https://www.amazon.com.au/Kappa-Climbs-Japanese-Childrens-Interactive/dp/B0DLTNF5RG/ref=sr_1_1?crid=2J0106OJIEAOY&dib=eyJ2IjoiMSJ9.jxS2Mj8jhsjHFHBpGZGNGw.llDzNKOvjAz4eav7qxgRh2IQDCVDBuuV7DoRNAFQByw&dib_tag=se&keywords=kappa+climbs&qid=1738288285&sprefix=Kappa+climbs%2Caps%2C824&sr=8-1"
-              ><img
-                width="45px"
-                height="45px"
-                src="../assets/HiPaint_1738302356331.png?v=1738302548754"
-              />
-              <small>Books</small>
-            </a>
-          </li>
+  <main-navigation logo-url="../assets/logo.svg"></main-navigation>
+  <div class="container">
+    <div class="character-profile-3">
+      <div class="character-info">
+        <h2>Rabbit</h2>
+        <h3>Likes:</h3>
+        <ul>
+          <li>Digging for treasure</li>
+          <li>Playing with his Golemini friend</li>
+          <li>Carrots</li>
+        </ul>
+        <h3>Dislikes:</h3>
+        <ul>
+          <li>Empty treasure chests</li>
+          <li>Loud noises</li>
         </ul>
       </div>
+      <!-- 
+        Image of the character standing next to a mini version of themselves.
+        The background should be a single color version of their house.
+      -->
+      <img src="https://placehold.co/400x600" alt="Character Profile Photo">
     </div>
-
-  <main class="container mx-auto px-4 py-16">
-    <img src="https://picsum.photos/seed/rabbit/800/400" alt="A placeholder image of the Rabbit">
-    <h1>The Rabbit</h1>
-    <p>An energetic treasure hunter, always digging holes around Everwood. His loyal partner is a Golemini, a tiny golem made of three stacked, sparkling gems that he unearthed on one of his digs.</p>
-    
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <!-- Product cards will go here -->
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-purple text-white py-12 mt-auto">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Contact Info -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Contact</h3>
-            <p>Email: <a href="mailto:yo@stagfoo.com">yo@stagfoo.com</</p>
-            <p>Location: Queensland, Australia</p>
-          </div>
-
-          <!-- Social Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Follow Me</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="https://x.com/stagfoo" class="hover:text-blue-400 transition-colors">X</a>
-              </li>
-              <li>
-                <a href="https://jp.linkedin.com/in/stagfoo" class="hover:text-blue-400 transition-colors"
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/stagfoo" class="hover:text-blue-400 transition-colors"
-                  >GitHub</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Shop Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">Shop</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >Etsy Store</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >itch.io</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-blue-400 transition-colors"
-                  >Ko-fi</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="text-center mt-8 pt-8 border-t border-gray-100">
-          <p>&copy; 2025 Alexander King. All rights reserved.</p>
-        </div>
+    <div class="character-products">
+      <h3>Products featuring this character:</h3>
+      <div class="product-grid">
+        <product-card
+          image="../assets/Adorable_White_Bunny_Emotes.jpg"
+          title="White Bunny Emotes"
+          price="AU $4.00"
+          description="8 Cute Rabbit Twitch Emotes in 6 Sizes!"
+          stripe-link="https://buy.stripe.com/dRmdR9eHA4Nw8ew2cFeZ20m"
+          etsy-link="https://www.etsy.com/shop/Stagfoo"
+          kofi-link="https://ko-fi.com/stagfoo"
+          tags="rabbit, bunny"
+        ></product-card>
+        <product-card
+          image="../assets/Bonk_the_Bunny_Emotes.webp"
+          title="Bonk the Bunny Emotes"
+          description="8 Cute Rabbit Twitch Emotes in 1 Sizes!"
+          price="AU $4.00"
+          link=""
+          stripe-link="https://buy.stripe.com/00wfZh9ng5RA52k2cFeZ20l"
+          kofi-link="https://ko-fi.com/s/75e638f392"
+          tags="rabbit, bunny"
+        ></product-card>
+        <product-card
+          image="../assets/Chibi_Bunny_Girl_PNGtuber_Model_Mouth_Blinking_Streamer_Vtuber_Discord_Twitch.jpg"
+          title="Chibi Bunny Girl PNGtuber"
+          price="AUD $10"
+          description="💖✨ Super chibi bunny girl Animal crossing style PNG TUBER ✨💖"
+          link=""
+          kofi-link="https://ko-fi.com/s/ad0445b2de"
+          stripe-link="https://buy.stripe.com/8x214neHAgwebqI5oReZ20x"
+          tags="vtuber,pngtuber,cute_anime,kawaii,virtual_youtuber,twitch,animal_crossing,chibi,cute_chibi,rabbit,bunny"
+        ></product-card>
+        <product-card
+          image="../assets/Animated_Twitch_Emote_1x_Animated_Bunny_Twitch_Meme_Emotes_Cute_Knife_Meme_Twitch_Streamer_Youtube_Discord_Animated_emotes.jpg"
+          title="Bunny Emote - Animated Knife Meme"
+          price="AUD $5.5"
+          description="The video example its longer and includes a background. The product is short and is transparent"
+          link=""
+          stripe-link="https://buy.stripe.com/8x27sLczs6VE0M47wZeZ20O"
+          tags="bunny_badges,bunny_twitch_emotes,rabbit_emotes,twitch_emotes,cute_emotes_pack,twitch_graphics,kawaii_emotes,cute_bunny_emotes,twitch_badges,emote_pack,streamer_emotes,animated_emote,white_bunny_emote,rabbit"
+        ></product-card>
       </div>
-    </footer>
+    </div>
+  </div>
 </body>
 </html>

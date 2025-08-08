@@ -1,3 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, .nav-links a {
+  font-family: "Cherry Bomb One", system-ui;
+}
+
 .bg-yellow {
   background: rgb(254, 255, 203);
 }
@@ -17,19 +25,29 @@
 
 .character-selector {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on mobile */
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .character-selector a {
+  display: flex; /* Make the link a flex container */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center items horizontally */
   text-decoration: none;
   color: #555;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  border: 2px solid #f0f0f0;
   border-radius: 20px;
   transition: all 0.3s ease;
+}
+
+.character-selector img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%; /* Make images circular */
+  margin-bottom: 0.5rem; /* Space between image and text */
 }
 
 .character-selector a:hover {

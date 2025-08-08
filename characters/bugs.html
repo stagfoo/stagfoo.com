@@ -1,19 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tigerberry the Tiny Fairy</title>
+  <title>Bugs</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../lib/main-navigation.js"></script>
+  <script src="../lib/card.js"></script>
+  <style>
+    body {
+      background-image: url('../assets/grid.svg');
+    }
+    .character-profile-3 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <img src="https://picsum.photos/seed/tigerberry/800/400" alt="A placeholder image of Tigerberry">
-  <h1>Tigerberry (The Tiny Fairy)</h1>
-  <p>A feisty, wingless fairy who carries a precious teapot. She's often seen flitting around the flower fields.</p>
-  
-  <h2>Featured Products</h2>
-  <div class="product-grid">
-    <!-- Product cards will go here -->
+  <main-navigation logo-url="../assets/logo.svg"></main-navigation>
+  <div class="container">
+    <div class="character-profile-3">
+      <div class="character-info">
+        <h2>Bugs</h2>
+        <h3>Likes:</h3>
+        <ul>
+          <li>Collecting shiny things</li>
+          <li>Exploring</li>
+          <li>Eating snacks</li>
+        </ul>
+        <h3>Dislikes:</h3>
+        <ul>
+          <li>Rainy days</li>
+          <li>Being told what to do</li>
+        </ul>
+      </div>
+      <!-- 
+        Image of the character standing next to a mini version of themselves.
+        The background should be a single color version of their house.
+      -->
+      <img src="https://placehold.co/400x600" alt="Character Profile Photo">
+    </div>
+    <div class="character-products">
+      <h3>Products featuring this character:</h3>
+      <div class="product-grid">
+        
+      </div>
+    </div>
   </div>
 </body>
 </html>

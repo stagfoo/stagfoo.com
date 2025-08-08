@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander King</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .bg-yellow {
-        background: rgb(254, 255, 203);
-      }
-      .bg-purple {
-        background: #bf71cf;
-      }
-      .hero-pfp {
-        height: 128px;
-        display: inline;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script src="lib/card.js"></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
@@ -92,11 +81,16 @@
     <div id="products" class="container mx-auto px-4 py-16">
       <h2 class="text-3xl font-bold text-center mb-4">Shop</h2>
       <input type="text" name="search" class="fuzzy-search" /> 
-      <div class="flex justify-center gap-4 mb-8"> 
-        <button onclick="setSearch(event)" class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="rabbit">🐰</button>
-        <button onclick="setSearch(event)"  class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="frog">🐸</button>
-        <button onclick="setSearch(event)"  class="filter-btn text-2xl p-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="elf">🧝</button>
-        <button onclick="setSearch(event)"  class="filter-btn text-xl px-4 py-2 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" data-filter="all">All</button> 
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="characters/rabbit.html"><img src="images/rabbit-icon.png" alt="Rabbit" /></a>
+        <a href="characters/frog.html"><img src="images/frog-icon.png" alt="Frog" /></a>
+        <a href="characters/elf.html"><img src="images/elf-icon.png" alt="Elf" /></a>
+        <a href="characters/bear.html"><img src="images/bear-icon.png" alt="Bear" /></a>
+        <a href="characters/fruit-folk.html"><img src="images/fruit-folk-icon.png" alt="Fruit Folk" /></a>
+        <a href="characters/kappa.html"><img src="images/kappa-icon.png" alt="Kappa" /></a>
+        <a href="characters/majo.html"><img src="images/majo-icon.png" alt="Majo" /></a>
+        <a href="characters/mermaid.html"><img src="images/mermaid-icon.png" alt="Mermaid" /></a>
+        <a href="characters/tigerberry.html"><img src="images/tigerberry-icon.png" alt="Tigerberry" /></a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list">
         <!-- Row 1 -->

@@ -1,0 +1,10 @@
+.bg-yellow {
+  background: rgb(254, 255, 203);
+}
+.bg-purple {
+  background: #bf71cf;
+}
+.hero-pfp {
+  height: 128px;
+  display: inline;
+}

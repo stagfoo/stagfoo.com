@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-image: url('./assets/grid.svg');
 }
 
 h1, h2, h3, .nav-links a {
@@ -83,14 +84,14 @@ h1, h2, h3, .nav-links a {
       justify-content: center;
       min-height: calc(100vh - 80px);
       text-align: center;
-    }
+}
     .floating-elements {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: 0%;
+      width: 75%;
       height: 100%;
-      z-index: -1; /* So they don't cover the content */
+      z-index: 2; /* So they don't cover the content */
     }
     .floating-elements img {
       position: absolute;
@@ -101,7 +102,12 @@ h1, h2, h3, .nav-links a {
       50% { transform: translateY(-20px); }
       100% { transform: translateY(0px); }
     }
-    
+ 
+h1,h2,h3 {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
     
     .cherry-bomb-one-regular {
   font-family: "Cherry Bomb One", system-ui;
@@ -109,6 +115,25 @@ h1, h2, h3, .nav-links a {
   font-style: normal;
 }
 
-.profle-image {
+.character-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image first, then text */
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+.character-profile img {
+  order: 0; /* Image is first by default */
+}
+@media (max-width: 768px) {
+  .character-profile {
+    grid-template-columns: 1fr;
+  }
+  .character-profile img {
+    order: -1; /* Move image to the top on mobile */
+  }
+}
+
+.profile-image {
   max-width: 400px;
 }

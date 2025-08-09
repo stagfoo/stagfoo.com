@@ -7,30 +7,19 @@
   <link rel="stylesheet" href="../style.css">
   <script src="../lib/main-navigation.js"></script>
   <script src="../lib/card.js"></script>
-  <style>
-    body {
-      background-image: url('../assets/grid.svg');
-    }
-    .character-profile-3 {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-    @media (max-width: 768px) {
-      .character-profile-3 {
-        grid-template-columns: 1fr;
-      }
-      .character-profile-3 img {
-        order: -1; /* Move image to the top */
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
 </head>
 <body>
   <main-navigation logo-url="../assets/logo.svg" home-url="../shop.html"></main-navigation>
   <div class="container">
-    <div class="character-profile-3">
+    <div class="character-profile">
+      <div class="floating-elements">
+          <img src="https://placehold.co/50x50/FFC0CB/FFC0CB" style="top: 10%; left: 60%; animation-delay: 0s;">
+          <img src="https://placehold.co/75x75/ADD8E6/ADD8E6" style="top: 50%; left: 80%; animation-delay: 2s;">
+          <img src="https://placehold.co/60x60/90EE90/90EE90" style="top: 80%; left: 55%; animation-delay: 4s;">
+        </div>
       <div class="character-info">
         <h2>Slimes</h2>
         <h3>Likes:</h3>
@@ -49,7 +38,7 @@
         Image of the character standing next to a mini version of themselves.
         The background should be a single color version of their house.
       -->
-      <img src="https://placehold.co/400x600" alt="Character Profile Photo">
+      <img class="profile-image" src="https://placehold.co/400x600" alt="Character Profile Photo">
     </div>
     <div class="character-products">
       <h3>Products featuring this character:</h3>

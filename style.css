@@ -108,3 +108,7 @@ h1, h2, h3, .nav-links a {
   font-weight: 400;
   font-style: normal;
 }
+
+.profle-image {
+  max-width: 400px;
+}

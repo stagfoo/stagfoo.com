@@ -17,10 +17,18 @@
       gap: 2rem;
       align-items: center;
     }
+    @media (max-width: 768px) {
+      .character-profile-3 {
+        grid-template-columns: 1fr;
+      }
+      .character-profile-3 img {
+        order: -1; /* Move image to the top */
+      }
+    }
   </style>
 </head>
 <body>
-  <main-navigation logo-url="../assets/logo.svg"></main-navigation>
+  <main-navigation logo-url="../assets/logo.svg" home-url="../shop.html"></main-navigation>
   <div class="container">
     <div class="character-profile-3">
       <div class="character-info">

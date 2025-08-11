@@ -84,24 +84,9 @@ h1, h2, h3, .nav-links a {
       justify-content: center;
       min-height: calc(100vh - 80px);
       text-align: center;
+      position: relative;
 }
-    .floating-elements {
-      position: absolute;
-      top: 0;
-      left: 0%;
-      width: 75%;
-      height: 100%;
-      z-index: 2; /* So they don't cover the content */
-    }
-    .floating-elements img {
-      position: absolute;
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0px); }
-    }
+    
  
 h1,h2,h3 {
   font-family: "Cherry Bomb One", system-ui;
@@ -136,4 +121,10 @@ h1,h2,h3 {
 
 .profile-image {
   max-width: 400px;
+}
+svg-animation {
+    position: absolute;
+    top: 0px;
+    left: 35%;
+    z-index: 9;
 }

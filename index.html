@@ -14,19 +14,33 @@
   body {
     background-image: url('./assets/grid.svg');
   }
+  .face-logo {
+    position: relative;
+  }
+  svg-animation {
+    width: 100%;
+    height: 100%;
+    top: -40px;
+    left: -87px;
+    right: 0px;
+    margin: 0 auto;
+  }
 </style>
 </head>
 <body>
   <main-navigation logo-url="./assets/logo.svg"></main-navigation>
   <div class="centered-content">
+    <div class="face-logo">
     <img src="/assets/me.png" width="300px" alt="About Me Photo" style="border-radius: 50%;">
+        <svg-animation></svg-animation>
+    </div>
     <div class="description">
       <h1>About Me</h1>
       <p>Hi! I'm a digital artist who loves creating cute and chaotic characters. Welcome to my little corner of the internet  
  (b ᵔ▽ᵔ)b  </p>
 
     </div>
-    <svg-animation></svg-animation>
+
   </div>
 </body>
 </html>

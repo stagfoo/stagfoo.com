@@ -128,3 +128,24 @@ svg-animation {
     left: 35%;
     z-index: 9;
 }
+
+ul.inline-list {
+  list-style-type: none;
+  padding-left: 0;
+  display:inline-block;
+
+}
+.inline-list li {
+  display: inline-block;
+}
+
+.bookmark-item {
+  display:inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.bookmark-item span {
+  clear:both;
+  display:block;
+  font-size: 0.7rem;
+}
